@@ -1,8 +1,18 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../App.css'
 
 const Home = () => {
+    const POST_URL = 'https://jsonplaceholder.typicode.com/posts'
+    const [posts, setPosts] = useState([])
+    const fetchPosts = async () => {
+        const response = await fetch(POST_URL)
+        const data = await response.json()
+        setPosts(data)
+    }
+    useEffect(()=> {
+        fetchPosts()
+    }, [])
     return (
         <div className="container">
             <h1>Home Page</h1>
