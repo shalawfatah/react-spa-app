@@ -1,23 +1,22 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
     return (
         <div>
             <div className="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <Link className="active" to='/'>Home</Link>
+            <Link to='/news'>News</Link>
+            <Link to='/contact'>Contact</Link>
+            <Link to='/about'>About</Link>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i className="fa fa-bars"></i>
             </a>
             </div>
 
             <div style={{paddingLeft:'16px'}}>
-            <h2>Responsive Topnav Example</h2>
-            <p>Resize the browser window to see how it works.</p>
             </div>
         </div>
     )
