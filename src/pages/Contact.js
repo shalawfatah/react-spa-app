@@ -19,7 +19,10 @@ const Contact = () => {
                 {user.map((us)=> {
                     return (
                         <>
-                        
+                        <h3>{us.name}</h3>
+                        <p>{us.email}</p>
+                        <p>{us.phone}</p>
+                        <p>{us.website}</p>
                         </>
                     )
                 })}
