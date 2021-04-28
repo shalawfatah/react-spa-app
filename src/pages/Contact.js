@@ -26,6 +26,7 @@ const Contact = () => {
                         <p style={{color:'gray'}}>{us.email}</p>
                         <p style={{color: 'white', backgroundColor:'gray', padding:'4px'}}>{us.phone}</p>
                         <p style={{color:'blue'}}>{us.website}</p>
+                        <p>{us.company.name}</p>
                         <hr />
                         </>
                     )
