@@ -1,14 +1,17 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Contact = () => {
     const [user, setUser] = useState([])
     const USER_URL = 'https://jsonplaceholder.typicode.com/users'
     const fetchUsers = async () => {
         const response = await fetch(USER_URL)
-        const data = response.json()
+        const data = await response.json()
         setUser(data)
     }
+    useEffect(()=> {
+        fetchUsers()
+    }, [])
     return (
         <div className="container">
             <h1>Contact Page</h1>
@@ -23,6 +26,7 @@ const Contact = () => {
                         <p>{us.email}</p>
                         <p>{us.phone}</p>
                         <p>{us.website}</p>
+                        <hr />
                         </>
                     )
                 })}
