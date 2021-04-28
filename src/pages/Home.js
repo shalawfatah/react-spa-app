@@ -15,6 +15,9 @@ const Home = () => {
     useEffect(()=> {
         fetchPosts()
     }, [])
+    const loadMore = async () => {
+        setVisible(prev => prev + 5)
+    }
     return (
         <div className="container">
             <h1>Home Page</h1>
@@ -28,7 +31,7 @@ const Home = () => {
                     )
                 })}
             </div>
-            <button>See More</button>
+            <button className="button" onClick={loadMore}>See More</button>
         </div>
     )
 }

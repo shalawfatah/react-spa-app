@@ -5,3 +5,12 @@ body {
 .container {
   margin: 2rem;
 }
+.button {
+  background-color: rgb(68, 129, 220);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  border-radius: 4px;
+}
