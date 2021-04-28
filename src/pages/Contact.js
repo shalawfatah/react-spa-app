@@ -24,7 +24,7 @@ const Contact = () => {
                         <>
                         <h3>{us.name}</h3>
                         <p style={{color:'gray'}}>{us.email}</p>
-                        <p>{us.phone}</p>
+                        <p style={{color: 'white', backgroundColor:'gray', padding:'4px'}}>{us.phone}</p>
                         <p style={{color:'blue'}}>{us.website}</p>
                         <hr />
                         </>
